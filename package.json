@@ -1,0 +1,11 @@
+{
+  "name": "marionette-busy",
+  "version": "0.0.1",
+  "author": "Burhan Zainuddin <burhan@codeyellow.nl>",
+  "description": "Behavior for showing a busy message.",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.com/codeyellow/marionette-busy"
+  },
+  "main": "busy.js"
+}

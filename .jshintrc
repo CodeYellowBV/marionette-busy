@@ -1,0 +1,28 @@
+{
+    "globals": {
+        // RequireJS
+        "require": true,
+        "define": true,
+        "module": true,
+
+        // Jasmin.
+        "expect": true,
+        "it": true,
+        "describe": true,
+        "jasmine": true,
+        "jasmineRequire": true,
+        "beforeEach": true,
+        "mostRecentAjaxRequest": true,
+        "spyOn": true
+    },
+    "onecase": true,
+    "quotmark": "single",
+    "unused": "vars",
+    "strict": true,
+    "undef": true,
+    "trailing": true,
+    "browser": true,
+    // console, alert, etc.
+    "devel": false,
+    "white": true
+}
