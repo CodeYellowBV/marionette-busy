@@ -1,6 +1,6 @@
 # marionette-busy
 
-A simple behavior to toggle a busy message to the user.
+A simple behavior to show a busy message to the user.
 
 ## Usage
 
