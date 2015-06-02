@@ -39,7 +39,7 @@ You can also manually trigger a busy message using `this.triggerMethod('show:bus
 
 ## Options
 
-```
+```js
 return Marionette.ItemView.extend({
     behaviors: {
         busy: {
