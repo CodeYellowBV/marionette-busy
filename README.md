@@ -1,6 +1,6 @@
 # marionette-busy
 
-A simple behavior to toggle a busy message to the user.
+A simple behavior to show a busy message to the user.
 
 ## Usage
 
@@ -39,7 +39,7 @@ You can also manually trigger a busy message using `this.triggerMethod('show:bus
 
 ## Options
 
-```
+```js
 return Marionette.ItemView.extend({
     behaviors: {
         busy: {
@@ -52,6 +52,7 @@ return Marionette.ItemView.extend({
         },
     },
 });
+```
 
 # Changelog
 
