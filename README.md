@@ -52,3 +52,15 @@ return Marionette.ItemView.extend({
         },
     },
 });
+
+# Changelog
+
+## 0.0.2
+- Show busy even if you call fetch before rendering the view. The following case broke before:
+
+```js
+model.fetch();
+new View({
+    model: model
+});
+```

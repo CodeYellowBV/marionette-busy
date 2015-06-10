@@ -16,15 +16,22 @@ define(function (require) {
             showWhileBusy: '._show-while-busy',
         },
         initialize: function (options) {
-            if (this.options.busyOnModel && this.view.getOption('model')) {
+            if (this.shouldListenToModel()) {
                 this.listenTo(this.view.getOption('model'), 'before:read', this.onShowBusy);
                 this.listenTo(this.view.getOption('model'), 'after:read', this.onHideBusy);
+
             }
 
-            if (this.options.busyOnCollection && this.view.getOption('collection')) {
+            if (this.shouldListenToCollection()) {
                 this.listenTo(this.view.getOption('collection'), 'before:read', this.onShowBusy);
                 this.listenTo(this.view.getOption('collection'), 'after:read', this.onHideBusy);
             }
+        },
+        shouldListenToModel: function () {
+            return this.options.busyOnModel && this.view.getOption('model');
+        },
+        shouldListenToCollection: function () {
+            return this.options.busyOnCollection && this.view.getOption('collection');
         },
         onShowBusy: function () {
             this.show(this.ui.showWhileBusy);
@@ -63,9 +70,18 @@ define(function (require) {
             
             this.onHideBusy();
 
-            if (wait) {
+            if (wait && wait.state && wait.state() === 'pending') {
                 this.onShowBusy();
-                wait.always(this.onShowBusy.bind(this));
+                wait.always(this.onHideBusy.bind(this));
+            } else {
+                // Show busy if a fetch has been triggered before the view was rendered.
+                if (this.shouldListenToModel() && this.view.getOption('model').inSyncRead) {
+                    this.onShowBusy();
+                }
+
+                if (this.shouldListenToCollection() && this.view.getOption('collection').inSyncRead) {
+                    this.onShowBusy();
+                }
             }
         }
     });
