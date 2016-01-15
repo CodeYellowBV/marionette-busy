@@ -2,10 +2,18 @@
   "name": "marionette-busy",
   "version": "0.0.2",
   "author": "Burhan Zainuddin <burhan@codeyellow.nl>",
-  "description": "Behavior for showing a busy message.",
+  "description": "Behavior for showing a busy message",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.com/codeyellow/marionette-busy"
+    "url": "https://github.com/CodeYellowBV/marionette-busy"
   },
+  "bugs": {
+    "url": "https://github.com/CodeYellowBV/marionette-busy/issues"
+  },
+  "keywords": [
+    "backbone",
+    "marionette"
+  ],
+  "license": "ISC",
   "main": "busy.js"
 }
