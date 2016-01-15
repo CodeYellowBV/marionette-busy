@@ -2,9 +2,16 @@
 
 A simple behavior to show a busy message to the user.
 
+Installation:
+
+```
+$ npm install marionette-notifications --save
+```
+
 ## Usage
 
 Define a view as follows:
+
 ```js
 var Marionette = require('marionette'),
     busy = require('marionette-busy');
@@ -16,10 +23,11 @@ return Marionette.ItemView.extend({
 });
 
 ```
-The template can now define 2 elements with class:
 
-- _hide-while-busy: This element will be hidden during busy.
-- _show-while-busy: This element will be shown during busy.
+The template can now define two elements with class:
+
+- `_hide-while-busy`: This element will be hidden during busy.
+- `_show-while-busy`: This element will be shown during busy.
 
 Make sure you add the following to your css file:
 
