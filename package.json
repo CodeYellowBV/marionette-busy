@@ -15,5 +15,5 @@
     "marionette"
   ],
   "license": "ISC",
-  "main": "busy.js"
+  "main": "index.js"
 }
