@@ -5,7 +5,7 @@ A simple behavior to show a busy message to the user.
 Installation:
 
 ```
-$ npm install marionette-notifications --save
+$ npm install marionette-busy --save
 ```
 
 ## Usage
@@ -13,8 +13,8 @@ $ npm install marionette-notifications --save
 Define a view as follows:
 
 ```js
-var Marionette = require('marionette'),
-    busy = require('marionette-busy');
+import Marionette from 'marionette';
+import BusyBehavior from 'marionette-busy';
 
 return Marionette.ItemView.extend({
     behaviors: {
